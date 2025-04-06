@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* Main container - full viewport coverage */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form styling - matches login style */
+.signup-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 450px;
+  transition: all 0.3s ease;
+}
+
+.signup-form:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.signup-form h2 {
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Input fields - fixed visibility */
+.signup-form input {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: white;
+  background-color: black; /* Changed from #f8fafc to white */
+  transition: all 0.3s;
+}
+
+.signup-form input::placeholder {
+  color: #a0aec0;
+}
+
+.signup-form input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Button styling - matches login */
+.signup-form button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+}
+
+.signup-form button:hover {
+  background: linear-gradient(to right, #5a6fd1, #6a4295);
+  transform: translateY(-2px);
+}
+
+.signup-form button:active {
+  transform: translateY(0);
+}
+
+/* Link styling */
+.text-center {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #4a5568;
+}
+
+.text-blue-500 {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.text-blue-500:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.signup-form {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .signup-form {
+    padding: 2rem 1.5rem;
+  }
+  
+  .signup-form h2 {
+    font-size: 1.8rem;
+  }
+  
+  .signup-form input {
+    padding: 0.8rem 1rem;
+  }
+}
