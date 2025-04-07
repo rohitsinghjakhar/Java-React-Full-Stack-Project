@@ -12,7 +12,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://java-react-full-stack-project-d31z.vercel.app/login",
+        "https://java-react-full-stack-project-d31z.vercel.app/api/auth/login",
         {
           email,
           password,
